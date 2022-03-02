@@ -26,6 +26,9 @@
 class Movies
 {
     public $title;
+    public $year;
+    public $product;
+    public $actor;
 }
 
 $movie1 = new Movies;
