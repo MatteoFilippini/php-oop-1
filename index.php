@@ -29,10 +29,16 @@ class Movies
     public $year;
     public $product;
     public $actor;
+
+    public function __construct($title, $year, $product, $actor)
+    {
+        $this->title = $title;
+        $this->year = $year;
+        $this->product = $product;
+        $this->actor = $actor;
+    }
 }
 
-$movie1 = new Movies;
-$movie_title = $movie1->title = 'ROma';
+$movie1 = new Movies('uncharted', '2022', 'pippo', 'jonny');
 
 var_dump($movie1);
-var_dump($movie_title);
