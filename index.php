@@ -37,6 +37,16 @@ class Movies
         $this->product = $product;
         $this->actor = $actor;
     }
+
+    public function getMovies()
+    {
+        return $this->title;
+    }
+
+    public function setMovies($title)
+    {
+        $this->title = $title;
+    }
 }
 
 $movie1 = new Movies('uncharted', '2022', 'pippo', 'jonny');
