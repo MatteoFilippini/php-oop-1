@@ -29,13 +29,15 @@ class Movies
     public $year;
     public $product;
     public $actor;
+    public $visible;
 
-    public function __construct($title, $year, $product, $actor)
+    public function __construct($title, $year, $product, $actor, $visible = true)
     {
         $this->title = $title;
         $this->year = $year;
         $this->product = $product;
         $this->actor = $actor;
+        $this->visible = $visible;
     }
 
     public function getMovies()
@@ -47,8 +49,23 @@ class Movies
     {
         $this->title = $title;
     }
+
+    public function onAir()
+    {
+        if ($this->year < 2000) {
+            $this->visible = false;
+        }
+    }
 }
 
 $movie1 = new Movies('uncharted', '2022', 'pippo', 'jonny');
+$movie2 = new Movies('cenerentola', '1998', 'disney', 'cene');
 
 var_dump($movie1);
+var_dump($movie2);
+
+$movie1->onAir();
+$movie2->onAir();
+
+var_dump($movie1);
+var_dump($movie2);
