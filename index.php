@@ -6,3 +6,30 @@
 - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà
 
  -->
+
+<!-- MOVIE
+    titolo
+    anno
+    produttore
+    cast
+
+    costruct
+
+    get
+    set
+
+
+ -->
+
+<?php
+
+class Movies
+{
+    public $title;
+}
+
+$movie1 = new Movies;
+$movie_title = $movie1->title = 'ROma';
+
+var_dump($movie1);
+var_dump($movie_title);
